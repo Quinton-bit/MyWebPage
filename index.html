@@ -2,65 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Quinton Dev — Projects, Games & AI</title>
+  <title>KimondoStudio — Games, Web & AI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Navigation -->
   <nav>
-    <h1 class="logo">QUINTON DEV</h1>
-    <ul>
+    <h1 class="logo">KimondoStudio</h1>
+
+    <button id="menu-toggle">☰</button>
+
+    <ul id="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#games">Games</a></li>
       <li><a href="#ai">AI</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub</a></li>
     </ul>
   </nav>
 
-  <!-- Home Section -->
-  <section id="home" class="section">
-    <h2>Welcome to My Developer Space</h2>
-    <p>I build games, websites, and soon my own AI. This page shows everything I'm working on.</p>
+  <!-- Hero -->
+  <section id="home" class="section hero">
+    <div class="hero-content">
+      <h2>Welcome to KimondoStudio</h2>
+      <p>I build neon‑styled games, web experiences, and soon my own AI.</p>
+      <button onclick="scrollToSection('projects')">View Projects</button>
+    </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects -->
   <section id="projects" class="section">
     <h2>Projects</h2>
-    <div class="card">
-      <h3>Drifter: Quiet Horizons</h3>
-      <p>A neon‑themed side‑scrolling game built with HTML, CSS, and JavaScript.</p>
-      <button onclick="openGame()">Play Game</button>
-    </div>
+    <div class="grid">
 
-    <div class="card">
-      <h3>Portfolio Website</h3>
-      <p>A clean, modern site showcasing my work and future creations.</p>
+      <div class="card">
+        <h3>Drifter: Quiet Horizons</h3>
+        <p>A neon side‑scrolling game built with HTML, CSS, and JavaScript.</p>
+        <button onclick="openGame()">Play Game</button>
+      </div>
+
+      <div class="card">
+        <h3>KimondoStudio Web</h3>
+        <p>This site is my hub for games, AI experiments, and future projects.</p>
+      </div>
+
+      <div class="card">
+        <h3>AI Assistant (Coming Soon)</h3>
+        <p>A custom AI project that will live right here on KimondoStudio.</p>
+      </div>
+
+      <div class="card">
+        <h3>My GitHub</h3>
+        <p>See all my code, projects, experiments, and future releases.</p>
+        <button onclick="window.open('https://github.com/YOUR_GITHUB_USERNAME','_blank')">Visit GitHub</button>
+      </div>
+
     </div>
   </section>
 
-  <!-- Games Section -->
+  <!-- Games -->
   <section id="games" class="section">
     <h2>Games</h2>
-    <p>My games will appear here. Drifter is the first one.</p>
+    <p>All my games will appear here.</p>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Drifter: Quiet Horizons</h3>
+        <p>My neon runner game.</p>
+        <button onclick="openGame()">Play</button>
+      </div>
+
+      <div class="card">
+        <h3>Coming Soon</h3>
+        <p>More games will be added as KimondoStudio grows.</p>
+      </div>
+
+    </div>
 
     <div id="game-container" class="hidden">
       <canvas id="gameCanvas"></canvas>
     </div>
   </section>
 
-  <!-- AI Section -->
+  <!-- AI -->
   <section id="ai" class="section">
-    <h2>My AI — Coming Soon</h2>
-    <p>I am building my own AI assistant using JavaScript and Python tools.</p>
+    <h2>AI — Coming Soon</h2>
+    <p>KimondoStudio will host my own AI assistant, built with JavaScript and Python tools.</p>
+    <div class="ai-soon">
+      <span class="pulse-dot"></span>
+      <span>Training in progress...</span>
+    </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>I'm Quinton, a developer who builds games, websites, and creative tech projects.</p>
+    <h2>About KimondoStudio</h2>
+    <p>
+      I'm Quinton, the creator behind KimondoStudio. I design games, build web experiences,
+      and explore AI and creative technology. This site is where all my projects live.
+    </p>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span> KimondoStudio — 
+      <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub</a>
+    </p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

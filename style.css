@@ -27,6 +27,15 @@ nav .logo {
   letter-spacing: 2px;
 }
 
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ff8c42;
+  font-size: 28px;
+  cursor: pointer;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -56,20 +65,41 @@ nav ul li a:hover {
   color: #ff8c42;
 }
 
-/* Cards */
+/* Hero */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content h2 {
+  font-size: 42px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 10px auto 20px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
 .card {
   background: #0f1c33;
   padding: 20px;
-  margin: 20px auto;
-  max-width: 600px;
   border-radius: 12px;
   box-shadow: 0 0 20px #000;
+  text-align: left;
 }
 
-.card h3 {
-  margin-top: 0;
-}
-
+/* Buttons */
 button {
   margin-top: 15px;
   padding: 12px 28px;
@@ -94,6 +124,81 @@ button:hover {
   text-align: center;
 }
 
-.hidden {
-  display: none;
+#gameCanvas {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 25px #000;
+}
+
+/* AI Coming Soon */
+.ai-soon {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.pulse-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff8c42;
+  box-shadow: 0 0 10px #ff8c42;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.4; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #050814;
+  border-top: 1px solid #111827;
+  font-size: 14px;
+}
+
+footer a {
+  color: #ff8c42;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+  #menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #0a0f1f;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 12px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .hero-content h2 {
+    font-size: 32px;
+  }
+
+  .section {
+    padding: 100px 20px 60px;
+  }
 }
