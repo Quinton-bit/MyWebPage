@@ -10,7 +10,7 @@ body {
 
 /* Navigation */
 nav {
-  padding-right: 40px; /* gives breathing room from scrollbar */
+   margin-right: 20px; /* gives breathing room from scrollbar */
   top: 0;
   width: 100%;
   background: #0a0f1f;
