@@ -8,7 +8,7 @@ function openGame() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
-  ctx.fillStyle = "#ff8c42";
+  ctx.fillStyle = "#99711b";
   ctx.font = "40px system-ui";
   ctx.fillText("Game Loaded — Insert Drifter Code Here", 50, 100);
 }
