@@ -7,9 +7,10 @@ body {
   scroll-behavior: smooth;
 }
 
+
 /* Navigation */
 nav {
-  position: fixed;
+  padding-right: 40px; /* gives breathing room from scrollbar */
   top: 0;
   width: 100%;
   background: #0a0f1f;
@@ -20,6 +21,8 @@ nav {
   box-shadow: 0 0 20px #000;
   z-index: 1000;
 }
+
+
 
 nav .logo {
   color: #ff8c42;
